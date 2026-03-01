@@ -9,15 +9,18 @@
 
 <h2>Add User</h2>
 
-<input id="name" placeholder="Name">
-<input id="email" placeholder="Email">
-<button onclick="addUser()">Add</button>
+<form id="userForm">
+  <input id="name" placeholder="Name">
+  <input id="email" placeholder="Email">
+  <button id ="addButton" onclick="addUser()">Add</button>
+</form>
 
+<p id="status"></p>p>
+    
 <h3>Users:</h3>
 <ul id="userList"></ul>
 
 <div id="error"></div>
-<form id="userForm"></form>
 
 <script src="Scripts/app.js"></script>
     
