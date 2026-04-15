@@ -1,0 +1,138 @@
+/* INPUT TEXT */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h4,
+h5 {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    font-weight: 400;
+}
+
+.input-custom:focus {
+    border-color: #3b82f6;
+    box-shadow: none;
+}
+
+.form-control {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1e293b;
+    /* normal text color */
+    padding: 10px 14px;
+}
+
+/* PLACEHOLDER (THIS IS IMPORTANT) */
+.form-control::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #94a3b8;
+    /* soft gray like screenshot */
+    opacity: 1;
+    /* ensures consistent look across browsers */
+}
+
+/* LABELS */
+label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+}
+
+/* REQUIRED ASTERISK */
+label span {
+    color: #ef4444;
+}
+
+/* TEXTAREA MATCH */
+textarea.form-control {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* PROFILE IMAGE WRAPPER */
+.profile-img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    margin: auto;
+    object-fit: cover;
+    padding: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-text {
+    text-align: center;
+}
+
+.profile-text h5, .profile-img p {
+    margin-bottom: 0;
+}
+
+
+.small-text {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.login-left {
+    display: flex;
+    gap: 12px;
+}
+
+.login-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #1f3b4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(100, 197, 177);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.save-btn:active {
+    transform: scale(0.98);
+}
