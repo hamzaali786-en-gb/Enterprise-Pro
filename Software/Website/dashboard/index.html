@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php $paths = 1;
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>Enterprise Pro - Dashboard</title>
-
-	<link rel="stylesheet" href="css/bootstrap1.min.css" />
-	<link rel="stylesheet" href="js/themefy_icon/themify-icons.css" />
-	<link rel="stylesheet" href="js/font_awesome/css/all.min.css" />
-	<link rel="stylesheet" href="css/menu.css">
-	<link rel="stylesheet" href="css/style1.css" />
-	<link rel="stylesheet" href="css/colors/default.css" id="colorSkinCSS">
-
-	<style>
+include('inc/header.php'); ?>
+<style>
 		/* 320px fix: prevent title and button overlapping */
 		@media (max-width: 480px) {
 			.page_title_box {
@@ -30,228 +18,110 @@
 			}
 		}
 	</style>
-</head>
-
 <body class="crm_body_bg">
-
-	<!-- sidebar -->
-	<nav class="sidebar vertical-scroll ps-container ps-theme-default ps-active-y">
-		<div class="logo d-flex justify-content-between">
-			<a href="/dashboard/"><span style="font-size:20px; font-weight:700; color:#1ccab8;">Enterprise Pro</span></a>
-			<div class="sidebar_close_icon d-lg-none">
-				<i class="ti-close"></i>
-			</div>
-		</div>
-		<ul id="sidebar_menu">
-			<li class="mm-active">
-				<a class="has-arrow" href="#" aria-expanded="true">
-					<div class="icon_menu">
-						<img src="img/menu-icon/dashboard.svg" alt="">
-					</div>
-					<span>Dashboard</span>
-				</a>
-				<ul class="mm-show">
-					<li><a class="active" href="/dashboard/">Overview</a></li>
-				</ul>
-			</li>
-			<li>
-				<a class="has-arrow" href="#" aria-expanded="false">
-					<div class="icon_menu">
-						<img src="img/menu-icon/2.svg" alt="">
-					</div>
-					<span>User Management</span>
-				</a>
-				<ul>
-					<li><a href="/users">All Users</a></li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
-	<!--/ sidebar -->
+	<?php include('inc/nav.php'); ?>
 
 	<section class="main_content dashboard_part large_header_bg">
-
-		<!-- top navbar -->
-		<div class="container-fluid g-0">
-			<div class="row">
-				<div class="col-lg-12 p-0">
-					<div class="header_iner d-flex justify-content-between align-items-center">
-						<div class="sidebar_icon d-lg-none">
-							<i class="ti-menu"></i>
-						</div>
-						<div class="serach_field-area d-flex align-items-center">
-							<div class="search_inner">
-								<form action="#">
-									<div class="search_field">
-										<input type="text" placeholder="Search here...">
-									</div>
-									<button type="submit"><img src="img/icon/icon_search.svg" alt=""></button>
-								</form>
-							</div>
-						</div>
-						<div class="header_right d-flex justify-content-between align-items-center">
-							<div class="profile_info">
-								<img src="img/client_img.png" alt="profile">
-								<div class="profile_info_iner">
-									<div class="profile_author_name">
-										<p id="profile-role">Admin</p>
-										<h5 id="profile-username">Loading...</h5>
-									</div>
-									<div class="profile_info_details">
-										<a href="#">My Profile</a>
-										<a href="#">Settings</a>
-										<a href="/logout">Log Out</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--/ top navbar -->
-
-		<div class="main_content_iner overly_inner">
-			<div class="container-fluid p-0">
-
-				<!-- page title -->
+		<!-- menu  -->
+	<?php include('inc/menu.php'); ?>
+		
+		<!--/ menu  -->
+		<div class="main_content_iner overly_inner ">
+			<div class="container-fluid p-0 ">
+				<!-- page title  -->
 				<div class="row">
 					<div class="col-12">
 						<div class="page_title_box d-flex align-items-center justify-content-between">
 							<div class="page_title_left">
 								<h3 class="f_s_30 f_w_700 text_white">Dashboard</h3>
 								<ol class="breadcrumb page_bradcam mb-0">
-									<li class="breadcrumb-item"><a href="javascript:void(0);">Enterprise Pro</a></li>
-									<li class="breadcrumb-item active">Overview</li>
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Project </a></li>
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+									<li class="breadcrumb-item active">index</li>
 								</ol>
 							</div>
-							<a href="/users" class="white_btn3">Manage Users</a>
+							<a href="#" class="white_btn3">Text Here</a>
 						</div>
 					</div>
 				</div>
-
-				<div class="row">
-					<!-- Revenue chart -->
+				<div class="row ">
 					<div class="col-lg-8 card_height_100">
 						<div class="white_card mb_20">
 							<div class="white_card_header">
 								<div class="box_header m-0">
 									<div class="main-title">
-										<h3 class="m-0">Revenue Overview</h3>
+										<h3 class="m-0">Revenue</h3>
 									</div>
 								</div>
 							</div>
 							<div class="white_card_body" style="height: 286px;">
-								<canvas id="bar"></canvas>
+								<!-- Enter text here -->
+								<div class="text-center">Text Here</div>
 							</div>
 						</div>
-
 						<div class="white_card mb_20">
-							<div class="white_card_body white_card2 d-flex align-items-center justify-content-between flex-wrap">
+							<div
+								class="white_card_body white_card2 d-flex align-items-center justify-content-between flex-wrap">
 								<div class="renew_report_left">
-									<h4 class="f_s_19 f_w_600 color_theme2 mb-0">User Management</h4>
-									<p class="color_gray2 f_s_12 f_w_600">Add, view, or remove users from the system.</p>
+									<h4 class="f_s_19 f_w_600 color_theme2 mb-0">Text</h4>
+									<p class="color_gray2 f_s_12 f_w_600">Lorem ipsum dolor, sit amet consectetur
+										adipisicing elit. Provident, quasi..</p>
 								</div>
 								<div class="btn">
-									<a href="/users" class="btn_1 mt-1 mb-1">Manage Users</a>
+									<a href="#" class="btn_1 mt-1 mb-1">Text Here</a>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- Stats panel -->
 					<div class="col-lg-4 card_height_100 mb_20">
 						<div class="white_card">
 							<div class="white_card_header">
 								<div class="box_header m-0">
 									<div class="main-title">
-										<h3 class="m-0">System Stats</h3>
+										<h3 class="m-0">Header</h3>
 									</div>
 								</div>
 							</div>
 							<div class="white_card_body p-0">
 								<div class="card_container">
-									<div style="padding: 20px;">
-										<p><strong>Total Users:</strong> <span id="stat-users">Loading...</span></p>
-										<p><strong>Status:</strong> <span style="color:#1ccab8;">Online</span></p>
-										<p><strong>Database:</strong> enterprise_db</p>
-									</div>
+									<div id="platform_type_dates_donut" style="height:280px"></div>
 								</div>
 							</div>
 						</div>
 						<div class="card_unit_footer d-flex justify-content-between">
 							<div class="single_card">
-								<p>Platform</p>
-								<h3>Web</h3>
-								<p class="d-flex align-items-center">Enterprise Pro</p>
+								<p>Header</p>
+								<h3>Text</h3>
+								<p class="d-flex align-items-center">More Text Here</p>
 							</div>
 							<div class="single_card disable_card">
-								<p>Version</p>
-								<h3>1.0</h3>
-								<p class="d-flex align-items-center">Interim Build</p>
+								<p>Header</p>
+								<h3>Text</h3>
+								<p class="d-flex align-items-center">More Text Here</p>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
-		<!-- footer -->
+		<!-- footer part -->
 		<div class="footer_part">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="footer_iner text-center">
-							<p>&copy; 2025 Enterprise Pro &mdash; Enterprise-Pro-P8</p>
+							<p>Footer here</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /footer -->
+		<!-- footer End -->
 
 	</section>
-
-	<div id="back-top" style="display: none;">
-		<a title="Go to Top" href="#"><i class="ti-angle-up"></i></a>
-	</div>
-
-	<!-- Scripts -->
-	<script src="js/jquery1-3.4.1.min.js"></script>
-	<script src="js/popper1.min.js"></script>
-	<!-- Chart.js v2 -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-	<!-- metisMenu for sidebar accordion -->
-	<script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.css">
-	<script src="js/menu.js"></script>
-	<script src="js/dashboard_init.js"></script>
-	<script src="js/custom.js"></script>
-
-	<script>
-		// Fetch logged-in username and update profile display
-		fetch("/api/me")
-			.then(r => r.json())
-			.then(data => {
-				if (data.username) {
-					document.getElementById("profile-username").textContent = data.username;
-				}
-			})
-			.catch(() => {});
-
-		// Fetch total user count for stats panel
-		fetch("/api/users")
-			.then(r => r.json())
-			.then(data => {
-				if (data.data) {
-					document.getElementById("stat-users").textContent = data.data.length;
-				}
-			})
-			.catch(() => {
-				document.getElementById("stat-users").textContent = "N/A";
-			});
-	</script>
+	<!-- main content part end -->
+	<?php include('inc/footer.php'); ?>
 
 </body>
 
