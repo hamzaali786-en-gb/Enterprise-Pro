@@ -1,1 +1,4 @@
-Fill this in later...
+- flask 
+- mysql.connector
+- werkkzeug.security
+- os
