@@ -1,7 +1,7 @@
 <!-- sidebar  -->
 <nav class="sidebar vertical-scroll  ps-container ps-theme-default ps-active-y">
     <div class="logo d-flex justify-content-between">
-        <a href=""><img src="<?php echo $path; ?>" alt="Logo Here"></a>
+        <a href=""><img src="<?php echo $path; ?>img/logo.png" alt="Logo Here"></a>
         <div class="sidebar_close_icon d-lg-none">
             <i class="ti-close"></i>
         </div>

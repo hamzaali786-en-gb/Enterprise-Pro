@@ -11,7 +11,8 @@ include(($paths == "3" ? '../inc/data.php' : 'inc/data.php')); ?>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Project Dashboard</title>
+    <title>BD25 Crowd Engagement Evaluation | Dashboard</title>
+    <link rel="shortcut icon" href="<?php echo $path; ?>img/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="<?php echo $path; ?>css/bootstrap1.min.css" />
     <!-- themefy CSS -->
