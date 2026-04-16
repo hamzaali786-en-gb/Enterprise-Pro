@@ -103,6 +103,24 @@ include('../inc/header.php'); ?>
 			}
 			history();
 
+			$(document).on('click', '.DELETE', function() {
+				let data = $(this).attr('id');
+
+				if (confirm('Are you sure you want to delete this Account?')) {
+					$.ajax({
+						url: "../api/user/delete.php",
+						type: "POST",
+						data: {
+							uid: data
+						},
+						success: function(data) {
+							alert(data);
+							history();
+						},
+					});
+				}
+			});
+
 			function navigation(path, data) {
 				$(document).on("click", ".page_navigation", function() {
 					let page = $(this).attr("id");

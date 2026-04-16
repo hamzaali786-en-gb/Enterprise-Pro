@@ -51,8 +51,8 @@ include('../inc/header.php'); ?>
 												</div>
 												<div class="col-md-6">
 													<div class="form-group">
-														<label for="fname">Last Name</label>
-														<input type="text" name="lname" id="fname" class="form-control"
+														<label for="lname">Last Name</label>
+														<input type="text" name="lname" id="lname" class="form-control"
 															placeholder="Enter last name">
 													</div>
 												</div>
@@ -61,7 +61,7 @@ include('../inc/header.php'); ?>
 											<div class="row mt-3">
 												<div class="col-md-6">
 													<div class="form-group">
-														<label for="fname">Email</label>
+														<label for="email">Email</label>
 														<input type="email" name="email" id="email" class="form-control"
 															placeholder="Enter first name">
 													</div>
@@ -174,7 +174,7 @@ include('../inc/header.php'); ?>
 						alert(data);
 						history();
 
-						$(this)[0].reset();
+						$('.ADD_USER')[0].reset();
 					},
 				});
 			});
@@ -186,7 +186,9 @@ include('../inc/header.php'); ?>
 					$.ajax({
 						url: "../api/user/delete.php",
 						type: "POST",
-						data: $(this).serialize(),
+						data: {
+							uid: data
+						},
 						success: function(data) {
 							alert(data);
 							history();
@@ -194,7 +196,6 @@ include('../inc/header.php'); ?>
 					});
 				}
 			});
-
 
 			function history() {
 

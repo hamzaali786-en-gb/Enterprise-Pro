@@ -39,8 +39,7 @@ while ($row = mysqli_fetch_assoc($query)) {
                 <td>' . $row['lname'] . '</td>
                 <td>' . $row['email'] . '</td>
                 <td>' . $row['role'] . '</td>
-                <td>' . buttons("href='javascript:void(0)' id='$row[uid]'", "DELETE", 'fa fa-edit', "")
-        . buttons("href='javascript:void(0)' id='$row[uid]'", "DELETE", 'fa fa-trash-alt text-danger', "") . '</td>';
+                <td>' .buttons("href='javascript:void(0)' id='$row[uid]'", "DELETE", 'fa fa-trash-alt text-danger', "") . '</td>';
 
 
     $output .= '</tr>';

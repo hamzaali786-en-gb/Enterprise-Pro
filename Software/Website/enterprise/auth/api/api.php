@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
             }
 
             $_SESSION["Last_login_timestamp"] = time();
-            $_SESSION['username'] = $row['username'];
+            $_SESSION['uid'] = $row['uid'];
             $_SESSION['role'] = $row['role'];
             header('location: ' . $location);
         }

@@ -16,8 +16,8 @@ if ($db->connect_error) {
 function buttons($data, $class, $icon, $icon_type)
 {
     return '
-        <div class="btn-group" style="padding-right:8px;">
-            <a ' . $data . ' class="btn' . $class . '">' . ($icon_type == "" ? '<i class="' . $icon . '">' : $icon) . '</i></a>
+        <div class="btn-group d-flex justify-content-center">
+            <a ' . $data . ' class="btn ' . $class . '" style="padding:0;">' . ($icon_type == "" ? '<i class="' . $icon . '">' : $icon) . '</i></a>
         </div>';
 }
 
@@ -32,7 +32,7 @@ function navigation($table, $where, $page, $records_per_page)
 
     $num_rows = mysqli_num_rows($pagination_query);
     $total_pages = ceil($num_rows / $records_per_page);
-    
+
     $output .= '
     <div class="border-top mt-5 pt-3">
     <div class="card mb-3">

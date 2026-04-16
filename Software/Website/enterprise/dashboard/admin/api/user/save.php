@@ -24,8 +24,8 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) &
             echo "Error, Email already exists";
         }
     } else {
-        $query = mysqli_query($db, "INSERT INTO users(uid,fname, lname, email, role)VALUES('$uid','$fname','$lname','$email','$role')");
-        $query2 = mysqli_query($db, "INSERT INTO login(uid,username, password)VALUES('$uid','$username','$password')");
+        $query = mysqli_query($db, "INSERT INTO users(uid,fname, lname, email,role)VALUES('$uid','$fname','$lname','$email','$role')");
+        $query2 = mysqli_query($db, "INSERT INTO login(uid,username, password,role)VALUES('$uid','$username','$password','$role')");
         if ($query && $query2) {
             http_response_code(201);
 

@@ -2,7 +2,8 @@
 $path = ($paths == 1 ? $path = '' : ($paths == 2 ? '../' : '../../'));
 
 include($path . '../db/db.php');
-include(($paths == "3" ? '../inc/session.php' : 'inc/session.php')); ?>
+include(($paths == "3" ? '../inc/session.php' : 'inc/session.php'));
+include(($paths == "3" ? '../inc/data.php' : 'inc/data.php')); ?>
 <!DOCTYPE html>
 <html lang="zxx">
 

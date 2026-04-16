@@ -2,10 +2,6 @@
 
 include('../inc/header.php'); ?>
 
-<style>
-
-</style>
-
 <body class="crm_body_bg">
 	<?php include('../inc/nav.php'); ?>
 
@@ -49,15 +45,15 @@ include('../inc/header.php'); ?>
 																<img src="../../img/profile.png" alt="profile" class="profile-img">
 															</div>
 														</div>
-														<p class="small-text mt-2">User ID : PXL-2DLRQT14</p>
-														<h5>Dio brando</h5>
+														<p class="small-text mt-2">User ID : PXL-<?php echo $user['uid']; ?></p>
+														<h5><?php echo $user['fname'] . ' ' . $user['lname']; ?></h5>
 														<p class="small-text">2026 years, Barbados</p>
 													</div>
 
-													<div class="mt-4">
-														<div class="icon-text">📱 +1234567764</div>
-														<div class="icon-text">✉️ benkenneth4584@gmail.com</div>
-														<div class="icon-text">📅 30/11/0001</div>
+													<div class="mt-4 mb-5">
+														<!-- <div class="icon-text">📱 +1234567764</div> -->
+														<div class="icon-text">✉️ <?php echo $user['email']; ?></div>
+														<div class="icon-text">📅 <?php echo $user['date']; ?></div>
 													</div>
 												</div>
 											</div>
@@ -68,22 +64,22 @@ include('../inc/header.php'); ?>
 								<!-- RIGHT FORM -->
 								<div class="col-lg-8 col-md-12 d-flex">
 									<div class="card w-100 p-4 d-flex flex-column justify-content-between">
-										<form>
+										<form method="POST" class="UPDATE">
 											<h4>Profile Settings</h4>
 
 											<div class="row mt-4">
 												<div class="col-md-12 mb-3">
 													<label>First Name *</label>
-													<input class="form-control input-custom" value="Dio">
+													<input class="form-control input-custom" name="fname" value="<?php echo $user['fname']; ?>" placeholder="Enter Firstname">
 												</div>
 												<div class="col-md-12 mb-3">
 													<label>Last Name *</label>
-													<input class="form-control input-custom" value="brando">
+													<input class="form-control input-custom" name="lname" value="<?php echo $user['lname']; ?>" placeholder="Enter Lastname">
 												</div>
 
 												<div class="col-md-12 mb-3">
 													<label>Mail *</label>
-													<input class="form-control input-custom" value="benkenneth4584@gmail.com">
+													<input class="form-control input-custom" name="email" value="<?php echo $user['email']; ?>" placeholder="Enter E-Mail">
 												</div>
 											</div>
 											<div class="d-flex justify-content-end mt-1">
@@ -104,13 +100,13 @@ include('../inc/header.php'); ?>
 										<h4>Authentication Details</h4>
 										<div class="row mt-3">
 											<div class="col-md-4">User Name :</div>
-											<div class="col-md-8">dio</div>
+											<div class="col-md-8"><?php echo $login['username']; ?></div>
 
 											<div class="col-md-4 mt-2">Login Password :</div>
 											<div class="col-md-8 mt-2">********</div>
 
 											<div class="col-md-4 mt-2">Last Password change :</div>
-											<div class="col-md-8 mt-2">Ago</div>
+											<div class="col-md-8 mt-2">************</div>
 										</div>
 									</div>
 								</div>
@@ -176,6 +172,23 @@ include('../inc/header.php'); ?>
 	</section>
 	<!-- main content part end -->
 	<?php include('../inc/footer.php'); ?>
+
+	<script>
+		$(document).ready(function() {
+			$('.UPDATE').on('submit', function(e) {
+				e.preventDefault();
+
+				$.ajax({
+					url: "../api/user/update.php",
+					type: "POST",
+					data: $(this).serialize(),
+					success: function(data) {
+						alert(data);
+					},
+				});
+			});
+		});
+	</script>
 
 </body>
 

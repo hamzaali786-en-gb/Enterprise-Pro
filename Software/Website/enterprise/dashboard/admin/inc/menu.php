@@ -21,14 +21,14 @@
                         <img src="<?php echo $path; ?>img/profile.png" alt="profile">
                         <div class="profile_info_iner">
                             <div class="profile_author_name">
-                                <h5 style="font-size: 18px;">Name: <?php echo $_SESSION['username'];?></h5>
-                                <p style="font-size:15px;">Role: <?php echo $_SESSION['role'];?> </p>
+                                <h5 style="font-size: 18px;">Name: <?php echo ($user['fname'] . ' ' . $user['lname']); ?></h5>
+                                <p style="font-size:15px;">Role: <?php echo ($user['role']); ?> </p>
 
                             </div>
                             <div class="profile_info_details">
                                 <a href="#">My Profile </a>
                                 <a href="<?php echo $path; ?>admin/settings">Settings</a>
-                                <a href="<?php echo (isset($_SESSION['username']) && isset($_SESSION['role']) == "Admin"? "?logout=1" : ""); ?>">Log Out </a>
+                                <a href="<?php echo (isset($_SESSION['uid']) && isset($_SESSION['role']) == "Admin" ? "?logout=1" : ""); ?>">Log Out </a>
                             </div>
                         </div>
                     </div>
