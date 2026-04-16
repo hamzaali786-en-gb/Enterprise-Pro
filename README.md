@@ -15,8 +15,8 @@ open app.py and update the get_db_connection() function with the correct MySQL h
 # Install dependencies
 
 - pip install flask 
-- pip install mysql-connector-python werkzeung
 - pip install mysql.connector
+- pip install werkzeug.security
 - pip install os
 
 These will also be in the requirements.txt file.
