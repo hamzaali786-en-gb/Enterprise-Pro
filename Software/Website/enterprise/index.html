@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD25 Crowd Engagement Evaluation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .primary-bg {
+            background-color: rgb(100, 197, 177);
+            color: white;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .navbar {
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+
+        .navbar.scrolled {
+            background-color: rgb(100, 197, 177);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: rgb(100, 197, 177);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">BD25 Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stakeholders">Stakeholders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero p-0">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100" style="height:100vh; object-fit:cover;" alt="crowd">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100" style="height:100vh; object-fit:cover;" alt="analytics">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100" style="height:100vh; object-fit:cover;" alt="ai">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100" style="height:100vh; object-fit:cover;" alt="data visualization">
+                </div>
+            </div>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            <!-- Overlay content -->
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center"
+                style="top:0; bottom:0;">
+                <div style="background: rgba(100,197,177,0.7); padding: 30px; border-radius: 15px;">
+                    <h1 class="display-5 fw-bold text-white">BD25 Crowd Engagement Evaluation</h1>
+                    <p class="lead text-white mt-3">Machine Learning powered multimodal analysis with secure web
+                        interface</p>
+                    <a href="#about" class="btn btn-light mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container text-center">
+            <h2 class="mb-4">About the Project</h2>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80"
+                class="img-fluid rounded mb-4" alt="team">
+            <p class="text-muted">
+                This project evaluates crowd engagement during BD25 UK City of Culture events using multimodal data
+                including images, video, audio, and time-series records. Machine learning models are applied for crowd
+                counting, engagement analysis, comparison, and prediction.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Core Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                            class="feature-img" alt="data">
+                        <h5>Multimodal Data</h5>
+                        <p>2D/3D images, videos, audio, and time-series data integration.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+                            class="feature-img" alt="ml">
+                        <h5>Machine Learning</h5>
+                        <p>Crowd counting, engagement analytics, prediction models.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
+                            class="feature-img" alt="security">
+                        <h5>Secure Web Platform</h5>
+                        <p>3-tier architecture with controlled and secure access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h5>Data Collection</h5>
+                    <p class="text-muted">Capture images, videos, and sensor data from live events.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Processing</h5>
+                    <p class="text-muted">Preprocess and clean multimodal datasets.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Analysis</h5>
+                    <p class="text-muted">Apply ML models for crowd detection and engagement scoring.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Insights</h5>
+                    <p class="text-muted">Visualize trends and generate actionable insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Use Cases</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Event Monitoring</h5>
+                        <p class="text-muted">Track crowd size and engagement in real time.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Urban Planning</h5>
+                        <p class="text-muted">Support decision-making using crowd analytics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Safety & Security</h5>
+                        <p class="text-muted">Identify risks and ensure safe event environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="mb-5">Project Highlights</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>10K+</h3>
+                    <p class="text-muted">Data Samples</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>95%</h3>
+                    <p class="text-muted">Model Accuracy</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>4+</h3>
+                    <p class="text-muted">Data Modalities</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>24/7</h3>
+                    <p class="text-muted">Monitoring Capability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Project Timeline</h2>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h6>Phase 1</h6>
+                    <p class="text-muted">Data Collection</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Phase 2</h6>
+                    <p class="text-muted">Model Development</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Phase 3</h6>
+                    <p class="text-muted">System Integration</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Phase 4</h6>
+                    <p class="text-muted">Deployment & Testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="mb-5">Project Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Research Team</h5>
+                    <p class="text-muted">AI & Data Science Specialists</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Development Team</h5>
+                    <p class="text-muted">Full-stack & System Engineers</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Stakeholders</h5>
+                    <p class="text-muted">Academic & Industry Experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section primary-bg text-center">
+        <div class="container">
+            <h2 class="mb-3">Interested in This Project?</h2>
+            <p class="mb-4">Explore collaboration opportunities or request access to the platform.</p>
+            <a href="#contact" class="btn btn-light">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Stakeholders -->
+    <section id="stakeholders" class="section">
+        <div class="container text-center">
+            <h2 class="mb-4">Stakeholders</h2>
+            <p class="text-muted">
+                Professor Chris Gaffney, Ms Amel Hadfi, Professor CD Neagu
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Project Delivery</h2>
+            <p class="text-muted">
+                Delivered to BD25 Evaluation Team and AI Research (AIRE) Group. NDA required for all team members.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 BD25 Crowd Engagement Project</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll navbar effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
